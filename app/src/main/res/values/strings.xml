@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">West2_3</string>
     <string name="main_title">West2Chat</string>
+    <string name="main_add_chat">发起群聊</string>
+    <string name="main_add_empty">清空群聊列表</string>
+    <string name="main_add_quit">退出</string>
+    <string name="add_chat_title">群聊名称</string>
+    <string name="add_chat_title_edit_hint">请输入群聊名称</string>
+    <string name="add_chat_author">群聊创建者</string>
+    <string name="add_chat_author_edit_hint">请输入群聊创建者名称</string>
 </resources>

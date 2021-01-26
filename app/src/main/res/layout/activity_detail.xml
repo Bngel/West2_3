@@ -1,9 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailActivity">
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/colorWXbg"
+        android:layout_marginBottom="80dp">
+
+        <ImageView
+            android:id="@+id/detail_button_quit"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:src="@drawable/button_add_quit"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/detail_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_add_chat"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"/>
+
+        <ImageView
+            android:id="@+id/detail_chat_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/chat_img1"
+            android:layout_toLeftOf="@id/detail_title_text"
+            android:layout_marginRight="5dp"/>
+
+        <TextView
+            android:id="@+id/detail_author_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/detail_chat_img"
+            android:layout_alignLeft="@id/detail_title_text"
+            android:textSize="10sp"
+            android:text="@string/add_chat_author"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/detail_voice_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/detail_voice_img"/>
+
+        <EditText
+            android:id="@+id/detail_words_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/detail_voice_img"
+            android:layout_alignBottom="@id/detail_voice_img"
+            android:singleLine="true"/>
+    </RelativeLayout>
+</LinearLayout>
